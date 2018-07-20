@@ -148,7 +148,7 @@ class LTIAuthenticator(Authenticator):
                 args
         ):
             return {
-                'name': handler.get_body_argument('user_id'),
+                'name': handler.get_body_argument('lis_person_contact_email_primary'),
                 'auth_state': {k: v for k, v in args.items() if not k.startswith('oauth_')}
             }
 
